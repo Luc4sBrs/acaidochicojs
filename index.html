@@ -148,7 +148,7 @@
     .options-grid.sizes{ grid-template-columns:1fr; gap:8px; }
     .size-card{ flex-direction:row; align-items:center; gap:12px; padding:14px 16px; }
     .size-card .opt-title{ font-size:16px; flex:1; }
-    .size-card .opt-ml{ display:none; }
+    .size-card .opt-ml{ font-size:12px; color:var(--ink-soft); }
     .size-card .opt-price{ font-size:15px; }
     .size-card .opt-meta{ font-size:12px; white-space:nowrap; }
   }
@@ -479,8 +479,8 @@
     whatsappNumber: '554799431662',
 
     // 👉 Coordenadas da loja (CEP 89260-850, Jaraguá do Sul)
-    storeLat: -26.4749,
-    storeLng: -49.0862,
+    storeLat: -26.5070586,
+    storeLng: -49.1577598,
     freeDeliveryKm: 7,          // raio grátis em km
     ratePerKm: 1.50,            // R$/km (cobrado sobre TODOS os km)
 
@@ -777,7 +777,7 @@
     if(deliveryFee > 0){
       lines.push(`Taxa de entrega (${distKm.toFixed(1)}km × R$1,50): ${toBRL(deliveryFee)}`);
     } else {
-      lines.push(`Taxa de entrega: Grátis ✅`);
+      lines.push(`Taxa de entrega: Grátis ✅ (dentro de 7km da loja)`);
     }
     lines.push(`*TOTAL: ${toBRL(totalComTaxa)}*`);
     lines.push('');
